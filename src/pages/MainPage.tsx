@@ -7,7 +7,7 @@ export const MainPage = () => {
   const { isPending, error, data, refetch } = useQuery({
     queryKey: ["pics"],
     queryFn: () =>
-      fetch(`https://picsum.photos/v2/list?limit=10&page=${random}`).then(
+      fetch(`https://picsum.photos/v2/list?limit=10&page=${0}`).then(
         (res) => res.json()
       ),
   });
