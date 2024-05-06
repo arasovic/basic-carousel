@@ -7,9 +7,8 @@
 }
 
 .image {
-  height: 50vh;
-  width: 50vw;
-  object-fit: fill;
+  width: calc(100%);
+  object-fit: contain;
   border-radius: 50px 50px 50px 50px / 25px 25px 25px 25px;
 }
 
