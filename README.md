@@ -1,5 +1,7 @@
 # Basic carousel
 
-[X] Basic logic and working
-[ ] Style improvements
-[ ] Refresh image list
+<pre>
+[X] Basic logic and working <br/>
+[ ] Style improvements <br/>
+[ ] Refresh image list <br/>
+</pre>
