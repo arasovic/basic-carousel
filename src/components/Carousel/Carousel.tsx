@@ -3,10 +3,10 @@ import "./Carousel.css";
 
 type CarouselProps = {
   data: Record<string, string | number>[];
-  onChangeList: MouseEventHandler<HTMLButtonElement>
+  onChangeList: MouseEventHandler<HTMLButtonElement>;
 };
 
-const Carousel: FC<CarouselProps> = ({ data, onChangeList }) => {
+const Carousel: FC<CarouselProps> = ({ data }) => {
   const [pics, setPics] = useState(data);
   const [index, setIndex] = useState(0);
 
@@ -38,7 +38,8 @@ const Carousel: FC<CarouselProps> = ({ data, onChangeList }) => {
             {data.map((pic, i) => {
               return (
                 <img
-                  style={{display: index === i ? 'block': 'none' }}
+                  key={pic?.id}
+                  style={{ display: index === i ? "block" : "none" }}
                   className="image"
                   src={`${pic?.download_url}`}
                   alt={`${pic?.author}`}
@@ -53,7 +54,7 @@ const Carousel: FC<CarouselProps> = ({ data, onChangeList }) => {
             <button className="back" onClick={onBack}>
               Back
             </button>
-            
+
             <button className="next" onClick={onNext}>
               Next
             </button>

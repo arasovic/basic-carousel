@@ -4,11 +4,11 @@ import { useCallback } from "react";
 import { throttle } from "lodash";
 
 export const MainPage = () => {
-  const { isPending, error, data, refetch } = useQuery({
+  const { data } = useQuery({
     queryKey: ["pics"],
     queryFn: () =>
-      fetch(`https://picsum.photos/v2/list?limit=10&page=${0}`).then(
-        (res) => res.json()
+      fetch(`https://picsum.photos/v2/list?limit=10&page=${0}`).then((res) =>
+        res.json(),
       ),
   });
 
